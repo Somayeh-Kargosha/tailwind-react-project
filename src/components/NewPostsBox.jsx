@@ -1,12 +1,17 @@
 import { BsThreeDots } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import { TiUserAdd } from "react-icons/ti";
+import { AiFillLike } from "react-icons/ai";
+import { FaRegCommentAlt } from "react-icons/fa";
+import { SlLike } from "react-icons/sl";
+import { BiRepost } from "react-icons/bi";
+import { BsSendFill } from "react-icons/bs";
 
 function NewPostsBox() {
   return (
     <div className="py-2">
-      <div className="rounded-t-xl bg-white border-b-0 border border-gray-200 px-3 divide-y divide-gray-200">
-        <div className="flex justify-between p-[2px]">
+      <div className="rounded-xl bg-white border border-gray-200">
+        <div className="flex justify-between py-[6px] px-3">
           <div className="flex items-center space-x-2 text-[11px]">
             <a href="">
               <img
@@ -30,7 +35,9 @@ function NewPostsBox() {
           </div>
         </div>
 
-        <div className="flex justify-between px-1 py-2">
+        <hr className="mx-4 border-gray-200" />
+
+        <div className="flex justify-between px-4 py-3">
           <div className="flex items-center space-x-3">
             <a href="">
               <img
@@ -53,9 +60,30 @@ function NewPostsBox() {
             <span className="text-[16px] mt-[2px]">Connect</span>
           </button>
         </div>
-      </div>
-      <div className="rounded-b-xl bg-white border border-gray-200 border-t-0">
-        <img src="public/postpic.jpeg" alt="" className="rounded-b-xl w-full" />
+        <img src="public/postpic.jpeg" alt="" className="w-full" />
+        <div className="py-[5px] px-4 flex items-center space-x-1 opacity-70">
+          <AiFillLike className="text-blue-500 text-sm" />
+          <span className="text-[13px] mt-[2px]">2</span>
+        </div>
+        <hr className="mx-3 border-gray-200" />
+        <div className="flex justify-around text-sm opacity-80 items-center p-4 font-semibold">
+          <p className="flex items-center space-x-1">
+            <SlLike className="text-[17px]" />
+            <span className="mt-1">Like</span>
+          </p>
+          <p className="flex items-center space-x-1">
+            <FaRegCommentAlt />
+            <span>Comment</span>
+          </p>
+          <p className="flex items-center space-x-1">
+            <BiRepost className="text-2xl" />
+            <span>Repost</span>
+          </p>
+          <p className="flex items-center space-x-1">
+            <BsSendFill />
+            <span>Send</span>
+          </p>
+        </div>
       </div>
     </div>
   );
