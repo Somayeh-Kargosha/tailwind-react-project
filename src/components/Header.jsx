@@ -15,8 +15,8 @@ function Header() {
   return (
     <>
       <header className="sticky z-10 top-0 container max-w-full py-[2px] bg-white border-b">
-        <div className="container lg:max-w-full px-2 md:max-w-4xl sm:max-w-3xl md:py-0 py-2">
-          <nav className="flex items-center sm:justify-between lg:justify-around xl:justify-evenly ">
+        <div className="container lg:max-w-full lg:px-1 md:px-6 px-1 md:max-w-4xl sm:max-w-3xl md:py-0 py-2">
+          <nav className="flex items-center justify-between lg:justify-around xl:justify-evenly ">
             <div className="flex">
               <a href="">
                 <img
@@ -26,16 +26,16 @@ function Header() {
                 />
               </a>
               <div className="relative">
-                <MdOutlineSearch className="absolute md:left-4 left-2 lg:top-2 md:top-[1px] lg:text-lg md:text-4xl text-2xl top-[2px]" />
+                <MdOutlineSearch className="absolute md:left-4 left-1 lg:top-2 lg:text-lg md:text-4xl text-2xl top-[2px] md:top-0" />
                 <input
                   type="text"
                   name="search"
                   placeholder="Search"
-                  className="bg-blue-100 p-[5px] ml-1 w-72 rounded placeholder:text-right lg:block hidden lg:placeholder:mr-10 placeholder:text-sm"
+                  className="bg-blue-100 p-[5px] ml-1 w-72 rounded placeholder:text-right lg:block text-right hidden lg:placeholder:mr-10 placeholder:text-sm"
                 />
               </div>
             </div>
-            <ul className="items-center flex space-x-6 text-[10px] font-semibold">
+            <ul className="items-center flex md:space-x-6 space-x-[18px] text-[10px] font-semibold">
               <li>
                 <a className={className} href="#">
                   <FaHome className="text-2xl" />
@@ -87,7 +87,10 @@ function Header() {
               <li className="hidden md:block">
                 <a className={className} href="">
                   <FaTh className="text-2xl" />
-                  <span>For Business</span>
+                  <div className="flex items-center">
+                    <span>For Business</span>
+                    <MdOutlineArrowDropDown className="text-xl" />
+                  </div>
                 </a>
               </li>
               <li className="hidden md:block">

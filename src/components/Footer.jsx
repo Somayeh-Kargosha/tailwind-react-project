@@ -1,3 +1,5 @@
+import { MdOutlineArrowDropDown } from "react-icons/md";
+
 function Footer() {
   return (
     <footer className="px-4 py-3 text-sm">
@@ -18,8 +20,9 @@ function Footer() {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" className="flex items-center">
             <span>Privacy & Terms</span>
+            <MdOutlineArrowDropDown className="text-xl" />
           </a>
         </li>
         <li>
@@ -33,8 +36,10 @@ function Footer() {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" className="flex items-center">
             <span>Business Services</span>
+
+            <MdOutlineArrowDropDown className="text-xl" />
           </a>
         </li>
         <li>

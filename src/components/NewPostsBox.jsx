@@ -67,9 +67,9 @@ function NewPostsBox() {
         </div>
         <hr className="mx-3 border-gray-200" />
         <div className="flex justify-around text-sm opacity-80 items-center p-4 font-semibold">
-          <p className="flex items-center space-x-1">
+          <p className="flex space-x-1">
             <SlLike className="text-[17px]" />
-            <span className="mt-1">Like</span>
+            <span>Like</span>
           </p>
           <p className="flex items-center space-x-1">
             <FaRegCommentAlt />
