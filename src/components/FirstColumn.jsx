@@ -1,11 +1,11 @@
 import Community from "./Community";
 import Identity from "./Identity";
 
-function FirstColumn() {
+function FirstColumn({isOpen}) {
   return (
     <div>
       <Identity />
-      <Community />
+      <Community isOpen={isOpen}/>
     </div>
   );
 }

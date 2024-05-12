@@ -1,8 +1,12 @@
 import { FaHashtag, FaPeopleGroup, FaPlus } from "react-icons/fa6";
 
-function Community() {
+function Community({ isOpen }) {
   return (
-    <div className="rounded-xl bg-white border border-gray-200">
+    <div
+      className={`rounded-xl bg-white border border-gray-200 ${
+        isOpen ? "block" : "hidden"
+      }`}
+    >
       <div className="text-sm py-4 px-5 border-b space-y-5">
         <p className="opacity-70">Recent</p>
         <div className="space-y-3">

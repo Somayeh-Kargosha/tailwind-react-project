@@ -6,17 +6,19 @@ import UpdateButton from "./components/UpdateButton";
 import ThirdBox from "./components/ThirdBox";
 import GridContainer from "./components/GridContainer";
 import GlobalContainer from "./components/GlobalContainer";
+import { useState } from "react";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <>
       <Header />
 
       <GlobalContainer>
         <GridContainer>
-          <FirstColumn />
+          <FirstColumn isOpen={isOpen} />
 
-          <ToggleButton />
+          <ToggleButton isOpen={isOpen} setIsOpen={setIsOpen} />
           <SecondColumn />
 
           <UpdateButton />
