@@ -15,8 +15,8 @@ function Header() {
   return (
     <>
       <header className="sticky z-10 top-0 container max-w-full py-[2px] bg-white border-b">
-        <div className="container lg:max-w-full lg:px-1 md:px-6 px-1 md:max-w-4xl sm:max-w-3xl md:py-0 py-2">
-          <nav className="flex items-center justify-between lg:justify-around xl:justify-evenly ">
+        <div className="container lg:max-w-full px-2 md:max-w-4xl sm:max-w-3xl md:py-0 py-2">
+          <nav className="flex items-center sm:justify-between lg:justify-around xl:justify-evenly ">
             <div className="flex">
               <a href="">
                 <img
