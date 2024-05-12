@@ -4,17 +4,19 @@ import { FaHome, FaTh } from "react-icons/fa";
 import { ImBriefcase } from "react-icons/im";
 import { IoNotifications } from "react-icons/io5";
 import { MdOutlineArrowDropDown, MdOutlineSearch } from "react-icons/md";
-// import DotsMenu from "./DotsMenu";
+import DotsNav from "./DotsNav";
+import { useState } from "react";
 
 function Header() {
+  const [openDropDownNav, setOpenDropDownNav] = useState(false);
   const className =
     "hover:border-b-2 hover:border-gray-700 opacity-60 flex flex-col items-center hover:opacity-100";
 
   return (
     <>
       <header className="sticky z-10 top-0 container max-w-full py-[2px] bg-white border-b">
-        <div className="container mx-auto lg:max-w-full px-2 md:max-w-4xl">
-          <nav className="flex items-center md:justify-between justify-between lg:justify-around xl:justify-evenly ">
+        <div className="container lg:max-w-full px-2 md:max-w-4xl sm:max-w-3xl md:py-0 py-2">
+          <nav className="flex items-center sm:justify-between lg:justify-around xl:justify-evenly ">
             <div className="flex">
               <a href="">
                 <img
@@ -95,7 +97,10 @@ function Header() {
                 </a>
               </li>
               <li className="md:hidden">
-                <button className={`text-2xl ${className}`}>
+                <button
+                  className={`text-2xl ${className}`}
+                  onClick={() => setOpenDropDownNav(!openDropDownNav)}
+                >
                   <BsThreeDots />
                 </button>
               </li>
@@ -103,7 +108,7 @@ function Header() {
           </nav>
         </div>
       </header>
-      {/* <DotsMenu /> */}
+      <DotsNav openDropDownNav={openDropDownNav} />
     </>
   );
 }
